@@ -22,12 +22,13 @@ elif monstHealth >= 120 :
     monstType = 'Unique'
     monstDamage = random.randint(40,70)
 
-#starting Explanation
+#point variables
 strengthPoints = 0
 speedPoints = 0
 healthPoints = 0
 skillPoints = 3
 
+#skill menu
 def skill ():
     global skillPoints, strengthPoints, healthPoints, speedPoints, userDamagePrim, userHealth, userSpeed
     skillContinue = input("\nUse skill points? (Y/N) ")
@@ -35,7 +36,7 @@ def skill ():
     while skillContinue == 'y' or skillContinue == 'Y' :
               
             print("\nPoints available: %d" %(skillPoints))
-            skillSelect = input("Select your skill type:\nA) Strength = %d\nB) Speed = %d\nC) Health = %d\n"%(strengthPoints, speedPoints, healthPoints))
+            skillSelect = input("A) Strength = %d\nB) Speed = %d\nC) Health = %d\nSelect your skill type: "%(strengthPoints, speedPoints, healthPoints))
         
            
             if skillSelect == 'A' or skillSelect == 'a':
@@ -89,22 +90,28 @@ def skill ():
 
     return
 
+#menu
+def menu():
+    beginJourney = input('MENU\nStart your journey?(enter "start")\nSkill points menu(enter "skill")\nExit(enter "exit")\n')
+    while beginJourney != ('exit') or beginJourney != ('skill') or beginJourney != ('start') :
+        if beginJourney == 'skill':
+            skill()
+        if beginJourney == 'exit':
+            print("Bye! ")
+            quit()
+        else:
+            print("Your answer isnt recognized. Try again.")
+            
+
+        if beginJourney == 'start':
+            break
+    return    
+
+#intro
+menu()
 print("Hello! Welcome to 'The Forest'!")
 print("You have 3 skill points to start with.\nThroughout the game you can earn and use these points to give yourself boosts.")
 print("\nSkills:\nA) Strength \nB) Speed\nC) Health" )
 skill()
 
-def menu():
-    beginJourney = input('MENU\nStart your journey?(enter "start")\nSkill points menu(enter "skill")\nExit(enter "exit") ')
-    while beginJourney != ('exit') or ('skill') or ('start') :
-        if beginJourney == 'skill':
-            skill()
-        elif beginJourney == 'exit':
-            quit()
-        else:
-            print("Your answer isnt recognized. Try again.")
-            continue
-
-        if beginJourney == 'start':
-            break
-    return        
+    
