@@ -32,7 +32,7 @@ def skill ():
     global skillPoints, strengthPoints, healthPoints, speedPoints, userDamagePrim, userHealth, userSpeed
     skillContinue = input("\nUse skill points? (Y/N) ")
     
-    while skillContinue == 'y' or 'Y' :
+    while skillContinue == 'y' or skillContinue == 'Y' :
               
             print("\nPoints available: %d" %(skillPoints))
             skillSelect = input("Select your skill type:\nA) Strength = %d\nB) Speed = %d\nC) Health = %d\n"%(strengthPoints, speedPoints, healthPoints))
