@@ -38,7 +38,7 @@ def skill ():
             skillSelect = input("Select your skill type:\nA) Strength = %d\nB) Speed = %d\nC) Health = %d\n"%(strengthPoints, speedPoints, healthPoints))
         
            
-            if skillSelect == 'A' or 'a':
+            if skillSelect == 'A' or skillSelect == 'a':
                 print("STRENGTH\nDamage: %d\nPoints used: %d" %(userDamagePrim, strengthPoints))
                 skillUseStrength = int(input("Type how many points you'd like to spend(+)/refund(-) on 'STRENGTH': "))
                 if skillUseStrength > skillPoints:
@@ -52,7 +52,7 @@ def skill ():
                 print("Strength Points used: %d\nDamage: %d" %(strengthPoints, userDamagePrim))
                 skillContinue = input("Continue?(Y/N) ")
 
-            if skillSelect == 'B' or 'b':
+            if skillSelect == 'B' or skillSelect == 'b':
                 print("SPEED\nSpeed: %d\nPoints used: %d" %(userSpeed, speedPoints))
                 skillUseSpeed = int(input("Type how many points you'd like to spend(+)/refund(-) on 'SPEED': "))
                 if skillUseSpeed > skillPoints:
@@ -67,7 +67,7 @@ def skill ():
                 print("Speed Points used: %d\nSpeed: %d" %(speedPoints, userSpeed))
                 skillContinue = input("Continue?(Y/N) ")
 
-            if skillSelect == 'C' or 'c':
+            if skillSelect == 'C' or skillSelect == 'c':
                 print("HEALTH\nHealth: %d\nPoints used: %d" %(userHealth, healthPoints))
                 skillUseHealth = int(input("Type how many points you'd like to spend(+)/refund(-) on 'HEALTH': "))
                 if skillUseHealth > skillPoints:
@@ -83,7 +83,7 @@ def skill ():
              
                 skillContinue = input("Continue?(Y/N) ")
 
-            elif skillContinue == 'n' or 'N':
+            elif skillContinue == 'n' or skillContinue == 'N':
                 break
                 
 
